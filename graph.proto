@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package graph;
+
+message Point {
+  int32 x = 1;
+  int32 y = 2;
+}
+
+message PathRequest {
+  Point start = 1;
+  Point end = 2;
+}
+
+message PathResponse {
+  repeated Point path_points = 1;
+}
+
+service PathService {
+  rpc GetPath (PathRequest) returns (PathResponse);
+}
