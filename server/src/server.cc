@@ -65,7 +65,6 @@ namespace dijkstra_impl {
         vector<vector<pair<int, int>>> prev(rows, vector<pair<int, int>>(cols, {-1, -1}));
     
         priority_queue<Node, vector<Node>, greater<Node>> pq;
-        // Инициализация стартовой точки
         dist[start.first][start.second] = 0;
         pq.push(Node(start.first, start.second, 0));
     
