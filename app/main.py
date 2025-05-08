@@ -21,7 +21,6 @@ class MazeSolverApp:
         self.maze_width = 1000
         self.maze_height = 1000
         
-        # some variables
         self.start_point = None
         self.end_point = None
         self.image = None
@@ -92,7 +91,6 @@ class MazeSolverApp:
         h_scrollbar = tk.Scrollbar(frame, orient=tk.HORIZONTAL)
         h_scrollbar.pack(side=tk.BOTTOM, fill=tk.X)
 
-        # Холст для отображения лабиринта
         canvas_width = self.maze_width * self.cell_size
         canvas_height = self.maze_height * self.cell_size
         self.canvas = tk.Canvas(
@@ -179,7 +177,6 @@ class MazeSolverApp:
         return path
     
     def draw_path(self, path, color='blue'):
-        """Рисует путь на лабиринте, проходящий через центры клеток"""
         img_with_path = self.image.copy()
         draw = ImageDraw.Draw(img_with_path)
         
