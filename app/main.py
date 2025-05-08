@@ -1,6 +1,6 @@
 import grpc
 import tkinter as tk
-from tkinter import ttk  # Добавляем импорт ttk для стильных скроллбаров
+from tkinter import ttk
 from PIL import Image, ImageTk, ImageDraw
 import numpy as np
 from queue import PriorityQueue
